@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from './Section.module.css';
+import { SectionWrapper, SectionTitle } from './Section.styled';
 
 const Section = ({ title, children }) => {
   return (
-    <div className={css.wrapper}>
-      <h2 className={css.wrapper__title}>{title}</h2>
+    <SectionWrapper>
+      <SectionTitle>{title}</SectionTitle>
       {children}
-    </div>
+    </SectionWrapper>
   );
 };
 

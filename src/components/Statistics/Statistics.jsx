@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import css from './Statistics.module.css';
+import { StatsList, StatsItem } from './Statistics.styled';
 
 const Statistics = ({
   good,
@@ -10,15 +10,15 @@ const Statistics = ({
   countTotalFeedback,
 }) => {
   return (
-    <ul className={css.stats__list}>
-      <li className={css.stats__item}>Good: {good}</li>
-      <li className={css.stats__item}>Neutral: {neutral}</li>
-      <li className={css.stats__item}>Bad: {bad}</li>
-      <li className={css.stats__item}>Total: {countTotalFeedback}</li>
-      <li className={css.stats__item}>
+    <StatsList>
+      <StatsItem>Good: {good}</StatsItem>
+      <StatsItem>Neutral: {neutral}</StatsItem>
+      <StatsItem>Bad: {bad}</StatsItem>
+      <StatsItem>Total: {countTotalFeedback}</StatsItem>
+      <StatsItem>
         Positive feedback: {countPositiveFeedbackPercentage()}
-      </li>
-    </ul>
+      </StatsItem>
+    </StatsList>
   );
 };
 
